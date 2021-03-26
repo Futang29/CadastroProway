@@ -33,12 +33,14 @@ namespace CadastroProway
             this.btnCadAluno = new System.Windows.Forms.Button();
             this.cadSala = new System.Windows.Forms.Button();
             this.cadCafe = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnFinCadastro = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCadAluno
             // 
             this.btnCadAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadAluno.Location = new System.Drawing.Point(46, 90);
+            this.btnCadAluno.Location = new System.Drawing.Point(42, 79);
             this.btnCadAluno.Name = "btnCadAluno";
             this.btnCadAluno.Size = new System.Drawing.Size(192, 70);
             this.btnCadAluno.TabIndex = 0;
@@ -49,7 +51,7 @@ namespace CadastroProway
             // cadSala
             // 
             this.cadSala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cadSala.Location = new System.Drawing.Point(284, 90);
+            this.cadSala.Location = new System.Drawing.Point(280, 79);
             this.cadSala.Name = "cadSala";
             this.cadSala.Size = new System.Drawing.Size(192, 70);
             this.cadSala.TabIndex = 1;
@@ -60,13 +62,33 @@ namespace CadastroProway
             // cadCafe
             // 
             this.cadCafe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cadCafe.Location = new System.Drawing.Point(522, 90);
+            this.cadCafe.Location = new System.Drawing.Point(518, 79);
             this.cadCafe.Name = "cadCafe";
             this.cadCafe.Size = new System.Drawing.Size(192, 70);
             this.cadCafe.TabIndex = 2;
             this.cadCafe.Text = "Cadastrar Café";
             this.cadCafe.UseVisualStyleBackColor = true;
             this.cadCafe.Click += new System.EventHandler(this.cadCafe_Click);
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(552, 221);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(158, 54);
+            this.btnVoltar.TabIndex = 3;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // btnFinCadastro
+            // 
+            this.btnFinCadastro.Location = new System.Drawing.Point(42, 221);
+            this.btnFinCadastro.Name = "btnFinCadastro";
+            this.btnFinCadastro.Size = new System.Drawing.Size(158, 54);
+            this.btnFinCadastro.TabIndex = 4;
+            this.btnFinCadastro.Text = "Finalizar Cadastro";
+            this.btnFinCadastro.UseVisualStyleBackColor = true;
+            this.btnFinCadastro.Click += new System.EventHandler(this.btnFinCadastro_Click);
             // 
             // cadastrar
             // 
@@ -75,6 +97,8 @@ namespace CadastroProway
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(772, 287);
+            this.Controls.Add(this.btnFinCadastro);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.cadCafe);
             this.Controls.Add(this.cadSala);
             this.Controls.Add(this.btnCadAluno);
@@ -95,5 +119,7 @@ namespace CadastroProway
         private System.Windows.Forms.Button btnCadAluno;
         private System.Windows.Forms.Button cadSala;
         private System.Windows.Forms.Button cadCafe;
+        private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnFinCadastro;
     }
 }

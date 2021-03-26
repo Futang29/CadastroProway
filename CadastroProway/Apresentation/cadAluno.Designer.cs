@@ -53,7 +53,6 @@ namespace CadastroProway
             this.txbAluno.Name = "txbAluno";
             this.txbAluno.Size = new System.Drawing.Size(227, 23);
             this.txbAluno.TabIndex = 1;
-            this.txbAluno.TextChanged += new System.EventHandler(this.txbAluno_TextChanged);
             // 
             // btnCadastro
             // 

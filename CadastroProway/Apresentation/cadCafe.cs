@@ -6,7 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading;
-using CadastroProway.Services;
+using Domínio.Classes;
+using Servicos.Serviços;
 
 namespace CadastroProway
 {
@@ -45,9 +46,13 @@ namespace CadastroProway
 
         private void btnCadCafe_Click(object sender, EventArgs e)
         {
-            cadastroCafe cadC = new cadastroCafe();
-            cadC.Coffee(txbCoffee.Text);
+            Cafe cafe = new Cafe(txbCoffee.Text);
 
+            ServiçoCafe serviço = new ServiçoCafe();
+
+            var resposta = serviço.Cadastrar(cafe);
+
+            MessageBox.Show(resposta);
         }
     }
 }

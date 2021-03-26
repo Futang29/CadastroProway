@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading;
+using Dominio.Classes;
+using Servicos.Serviços;
 
 namespace CadastroProway
 {
@@ -14,6 +16,7 @@ namespace CadastroProway
         Thread thCadAluno;
         Thread thCadSala;
         Thread thCadCafe;
+        Thread thVoltar;
         public cadastrar()
         {
             InitializeComponent();
@@ -58,6 +61,30 @@ namespace CadastroProway
         private void abrirCadCafe(object obj)
         {
             Application.Run(new cadCafe());
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            thVoltar = new Thread(abrirMenu);
+            thVoltar.SetApartmentState(ApartmentState.STA);
+            thVoltar.Start();
+        }
+
+        private void abrirMenu(object obj)
+        {
+            Application.Run(new Form1());
+        }
+
+        private void btnFinCadastro_Click(object sender, EventArgs e)
+        {
+            FinalizarCadastro finalizarCadastro = new FinalizarCadastro(null);
+
+            ServiçoCadastro serviço = new ServiçoCadastro();
+
+            var resposta = serviço.Cadastrar(finalizarCadastro);
+
+            MessageBox.Show(resposta);
         }
     }
 }

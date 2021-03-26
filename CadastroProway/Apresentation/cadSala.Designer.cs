@@ -56,9 +56,9 @@ namespace CadastroProway
             // 
             // btnCadSala
             // 
-            this.btnCadSala.Location = new System.Drawing.Point(150, 112);
+            this.btnCadSala.Location = new System.Drawing.Point(133, 128);
             this.btnCadSala.Name = "btnCadSala";
-            this.btnCadSala.Size = new System.Drawing.Size(105, 39);
+            this.btnCadSala.Size = new System.Drawing.Size(129, 48);
             this.btnCadSala.TabIndex = 2;
             this.btnCadSala.Text = "Cadastrar";
             this.btnCadSala.UseVisualStyleBackColor = true;
